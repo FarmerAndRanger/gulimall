@@ -4,6 +4,12 @@ spring:
     url: jdbc:mysql://192.168.255.130:3306/gulimall_pms?useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai&useSSL=false
     username: root
     password: root
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 192.168.255.130:8848 # nacos
+  application:
+    name: product
 
 
 # MapperScan
@@ -13,3 +19,6 @@ mybatis-plus:
   global-config:
     db-config:
       id-type: auto
+
+server:
+  port: 10000
